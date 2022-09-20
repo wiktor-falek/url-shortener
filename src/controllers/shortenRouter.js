@@ -9,7 +9,7 @@ import { validationResult, param, body } from "express-validator";
 
 // redis store with keys free for use
 const clientFree = createClient({
-    host: 'apdo',
+    host: 'localhost',
     port: 9000
     //password: process.env.REDIS_PASS
 });
@@ -20,7 +20,7 @@ await clientFree.connect();
 
 // redis store with keys that have urls 
 const clientTaken = createClient({
-    host: 'apdo',
+    host: 'localhost',
     port: 9001
     //password: process.env.REDIS_PASS
 });
